@@ -91,7 +91,7 @@ list.onclick = function(e) {
 };
 // Cargar las emisoras mediante AJAX
 var xmlhttp = new XMLHttpRequest();
-var url = "https://nl1.api.radio-browser.info/json/stations/byname/jazz";
+var url = ["https://nl1.api.radio-browser.info/json/stations/byname/jazz"];
 
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -106,12 +106,20 @@ function myFunction(arr) {
     var out = "";
     var i;
     for (i = 0; i < arr.length; i++) {
+        if (arr[i].codec != "MP3") {
+            arr.splice(i, 1);
+        }
         out += '<a href="#" data-value="' + arr[i].url + '"><img id="emisora" src="' + arr[i].favicon + '">' + arr[i].name + '</a>';
 
     }
 
     document.getElementById("list").innerHTML = out;
 }
+// Elección mediante switch de estilo de emisoras
+switch(myFunction) {
+case url[0]:
+}
+
 // Cuando el usuario clicka en una radio, se abre el modal 
 	var lst = document.getElementById("lista");
 	lst.onclick = function() {
