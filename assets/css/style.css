@@ -69,14 +69,6 @@
      width: 80%;
      height: 60%;
  }
- /* Texto de la ventana modal */
- 
- .modal-text {
-     text-align: center;
-     animation-name: anim;
-     animation-duration: 500ms;
-     animation-iteration-count: infinite;
- }
  /* The Close Button */
  
  .close {
