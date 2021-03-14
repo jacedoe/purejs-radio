@@ -18,44 +18,120 @@
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">PureJS Radio</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-            <ul class="navbar-nav mr-auto"></ul>
-            <!-- Accent-colored flat button -->
-
-            <!-- Button trigger modal -->
-            <button id="myBtn" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" data-toggle="modal" data-target="#exampleModal">
+    <!-- Navigation -->
+    <div class="pos-f-t fixed-top">
+        <div class="collapse" id="navbarToggleExternalContent">
+          <div class="bg-dark p-4">
+            <h4 class="text-white">PureJS Radio</h4>
+            <span class="text-muted">Toggleable via the navbar brand.</span>
+          </div>
+          <div class="bg-dark p-4">
+            <div class="bg-dark p-4">
+                <form class="form-inline my-2 my-lg-0">
+                    <input id="myInput" class="form-control mr-sm-2" type="text" placeholder="Buscar emisoras" aria-label="Search">
+                </form>
+              </div>
+              <div class="bg-dark p-4">
+                <button id="myBtn" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#exampleModal">
                     Player
                 </button>
-
-
-            <form class="form-inline my-2 my-lg-0">
-                <input id="myInput" class="form-control mr-sm-2" type="text" placeholder="Buscar emisoras" aria-label="Search">
-            </form>
+              </div>
+          </div>
         </div>
-    </nav>
+        <nav class="navbar navbar-dark bg-dark">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </nav>
+      </div>
+<!-- Jumbotron Header -->
+    <header class="jumbotron my-4">
+      <h1 class="display-3">A Warm Welcome!</h1>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
+      <a href="#parrilla" class="btn btn-primary btn-lg">Call to action!</a>
+    </header>
+<!-- Parrilla -->
+<section class="content-section bg-light" id="parrilla">
+    <div class="row text-center">
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        
+         <a href="#tune" onclick="jazz()"> <img class="card-img-top" src="https://cdn0.101.ru/vardata/modules/channel/image/ce0e79af697d4ddda29fef6504b481fb.png" alt=""></a>
+          
+        
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        
+         <a href="#tune" onclick="rock()"> <img class="card-img-top" src="https://cdn.hunter.fm/image/thumb/station/rock-first/1000x1000ht.jpg" alt=""></a>
+          <div class="card-footer">
+            
+          </div>
+        
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        
+         <a href="#tune"onclick="classical()"> <img class="card-img-top" src="https://www.marinigerardi.it/eventi/wp-content/uploads/2016/11/181.FM-classic-jazz-radio-logo.jpg" alt=""></a>
+          <div class="card-footer">
+            
+          </div>
+        
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        
+         <a href="#tune"onclick="disco()"> <img class="card-img-top" src="http://www.antennevorarlberg.at/wp-content/uploads/2017/10/100x64_Disco-ohne-Logo.png" alt=""></a>
+          <div class="card-footer">
+            
+          </div>
+        
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        
+         <a href="#tune" onclick="cinema()"> <img class="card-img-top" src="https://webradio.ffh.de/custom/images/stationlist/soundtrack.jpg" alt=""></a>
+          
+        
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        
+        <a href="#tune" onclick="news()"> <img class="card-img-top" src="http://nettv.live/uploads/allimg/18/1-1Q020162J80-L.jpg" alt=""></a>
+         
+       
+     </div>
+     <div class="col-lg-3 col-md-6 mb-4">
+        
+        <a href="#tune" onclick="ethnic()"> <img class="card-img-top" src="http://radcap.ru/stylegraf/africanfolk.jpg" alt=""></a>
+         
+       
+     </div>
+     <div class="col-lg-3 col-md-6 mb-4">
+        
+        <a href="#tune" onclick="folk()"> <img class="card-img-top" src="https://lh3.ggpht.com/nprQwX4hOA_AbYa9RrrUgBaUzYEkJxojFHFOBj8ERUk7o0jBprQnf7ysOr5sXxFI7A=w300" alt=""></a>
+         
+       
+     </div>
+
+
+    </div>
+</section>
+    <section class="content-section bg-dark text-white text-center" id="tune">
     <div id="lista">
 
         <ul id="list">
             <li class="active">
-                <a href="#" data-value=""><img src=""></a>
+                <a href="#" data-value="http://0n-jazz.radionetz.de/0n-jazz.mp3"><img id="emisora" src="http://www.0nradio.com/images/favicon/mstile-144x144.png">- 0 N - Jazz on Radio ON Jazz</a>
             </li>
         </ul>
     </div>
-
+</section>
     <!-- The Modal -->
     <div id="myModal" class="modal">
 
         <!-- Modal content -->
         <div class="modal-content">
             <span class="close">&times;</span>
-            <p class="modal-text">SONANDO</p>
+            <p class="modal-text">On Air</p>
 
             <p id="info"></p>
             <audio id="audio" controls="controls" crossorigin="anonymous">
@@ -69,7 +145,7 @@
     </div>
 
 
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/app.js"></script>
 
 </body>
 
