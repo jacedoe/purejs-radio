@@ -103,7 +103,7 @@ xmlhttp.onreadystatechange = function() {
 xmlhttp.open("GET", url, true);
 xmlhttp.send();
 }
-function jazz() {
+
     var xmlhttp = new XMLHttpRequest();
     var url = "https://nl1.api.radio-browser.info/json/stations/byname/jazz";
     
@@ -115,85 +115,8 @@ function jazz() {
     };
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
-    }
-    function classical() {
-    var xmlhttp = new XMLHttpRequest();
-    var url = "https://nl1.api.radio-browser.info/json/stations/byname/classical";
+
     
-    xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            var myArr = JSON.parse(this.responseText);
-            myFunction(myArr);
-        }
-    };
-    xmlhttp.open("GET", url, true);
-    xmlhttp.send();
-    }
-    function disco() {
-    var xmlhttp = new XMLHttpRequest();
-    var url = "https://nl1.api.radio-browser.info/json/stations/byname/disco";
-    
-    xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            var myArr = JSON.parse(this.responseText);
-            myFunction(myArr);
-        }
-    };
-    xmlhttp.open("GET", url, true);
-    xmlhttp.send();
-    }
-    function cinema() {
-    var xmlhttp = new XMLHttpRequest();
-    var url = "https://nl1.api.radio-browser.info/json/stations/byname/soundtrack";
-    
-    xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            var myArr = JSON.parse(this.responseText);
-            myFunction(myArr);
-        }
-    };
-    xmlhttp.open("GET", url, true);
-    xmlhttp.send();
-    }
-    function news() {
-        var xmlhttp = new XMLHttpRequest();
-        var url = "https://nl1.api.radio-browser.info/json/stations/byname/news";
-        
-        xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                var myArr = JSON.parse(this.responseText);
-                myFunction(myArr);
-            }
-        };
-        xmlhttp.open("GET", url, true);
-        xmlhttp.send();
-        }
-        function ethnic() {
-            var xmlhttp = new XMLHttpRequest();
-            var url = "https://nl1.api.radio-browser.info/json/stations/byname/ethnic";
-            
-            xmlhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    var myArr = JSON.parse(this.responseText);
-                    myFunction(myArr);
-                }
-            };
-            xmlhttp.open("GET", url, true);
-            xmlhttp.send();
-            }
-            function folk() {
-                var xmlhttp = new XMLHttpRequest();
-                var url = "https://nl1.api.radio-browser.info/json/stations/byname/folk";
-                
-                xmlhttp.onreadystatechange = function() {
-                    if (this.readyState == 4 && this.status == 200) {
-                        var myArr = JSON.parse(this.responseText);
-                        myFunction(myArr);
-                    }
-                };
-                xmlhttp.open("GET", url, true);
-                xmlhttp.send();
-                }
 function myFunction(arr) {
     var out = "";
     var i;
@@ -201,7 +124,7 @@ function myFunction(arr) {
      //   if (arr[i].codec != "MP3") {
      //       arr.splice(i, 1);
      //   }
-        out += '<a href="#" data-value="' + arr[i].url + '"><img id="emisora" src="' + arr[i].favicon + '">' + arr[i].name + '</a>';
+        out += '<li><a href="#" data-value="' + arr[i].url + '"><img id="emisora" src="' + arr[i].favicon + '">' + arr[i].name + '</a></li>';
 
     }
     document.getElementById("list").innerHTML = out;
@@ -210,15 +133,38 @@ function myFunction(arr) {
 	var lst = document.getElementById("lista");
 	lst.onclick = function() {
 		modal.style.display = "block";
-		document.getElementById("info").innerHTML = audioSource.src
+		document.getElementById("info").innerHTML = audioSource.src;
 	}
+
+// Filtrado de resultados con JavaScript
+function mySearch() {
+    // Declare variables
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("list");
+    li = ul.getElementsByTagName('li');
+  
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByTagName('a')[0];
+      txtValue = a.textContent || a.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        li[i].style.display = "";
+      } else {
+        li[i].style.display = "none";
+      }
+    }
+  }
 	
 // Buscar emisoras en la página con jQuery
-$(document).ready(function() {
-    $("#myInput").on("keyup", function() {
+/*$(document).ready(function() {
+
+    $("#search").on("keyup", function() {
         var value = $(this).val().toLowerCase();
         $("#list *").filter(function() {
             $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            
         });
     });
-});
+}); */

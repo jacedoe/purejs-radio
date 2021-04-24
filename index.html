@@ -50,73 +50,17 @@
     <header class="jumbotron my-4">
       <h1 class="display-3">PureJS Radio!</h1>
       <p class="lead">Este es un proyecto de Radio Online libre y experimental, utilizando JavaScript y la API de radio-browser. Disfrute y comparta</p>
-      <a href="#parrilla" class="btn btn-primary btn-lg">Call to action!</a>
+      <div class="container" style="width:900px;">
+        
+        <br /><br />
+        <div align="center">
+            <input type="text" name="search" id="myInput" placeholder="Busca emisoras. Ex: jazz, rock..." class="form-control" onkeyup="mySearch()"/>
+        </div>
+        <ul class="list-group" id="result"></ul>
+        <br />
+    </div>
     </header>
 <!-- Parrilla -->
-<section class="content-section bg-light" id="parrilla">
-    <div class="row text-center">
-
-      <div class="col-lg-3 col-md-6 mb-4">
-        
-         <a href="#tune" onclick="jazz()"> <img class="card-img-top" src="https://cdn0.101.ru/vardata/modules/channel/image/ce0e79af697d4ddda29fef6504b481fb.png" alt=""></a>
-          
-        
-      </div>
-
-      <div class="col-lg-3 col-md-6 mb-4">
-        
-         <a href="#tune" onclick="rock()"> <img class="card-img-top" src="https://cdn.hunter.fm/image/thumb/station/rock-first/1000x1000ht.jpg" alt=""></a>
-          <div class="card-footer">
-            
-          </div>
-        
-      </div>
-
-      <div class="col-lg-3 col-md-6 mb-4">
-        
-         <a href="#tune"onclick="classical()"> <img class="card-img-top" src="https://www.marinigerardi.it/eventi/wp-content/uploads/2016/11/181.FM-classic-jazz-radio-logo.jpg" alt=""></a>
-          <div class="card-footer">
-            
-          </div>
-        
-      </div>
-
-      <div class="col-lg-3 col-md-6 mb-4">
-        
-         <a href="#tune"onclick="disco()"> <img class="card-img-top" src="http://www.antennevorarlberg.at/wp-content/uploads/2017/10/100x64_Disco-ohne-Logo.png" alt=""></a>
-          <div class="card-footer">
-            
-          </div>
-        
-      </div>
-      <div class="col-lg-3 col-md-6 mb-4">
-        
-         <a href="#tune" onclick="cinema()"> <img class="card-img-top" src="https://webradio.ffh.de/custom/images/stationlist/soundtrack.jpg" alt=""></a>
-          
-        
-      </div>
-      <div class="col-lg-3 col-md-6 mb-4">
-        
-        <a href="#tune" onclick="news()"> <img class="card-img-top" src="http://nettv.live/uploads/allimg/18/1-1Q020162J80-L.jpg" alt=""></a>
-         
-       
-     </div>
-     <div class="col-lg-3 col-md-6 mb-4">
-        
-        <a href="#tune" onclick="ethnic()"> <img class="card-img-top" src="http://radcap.ru/stylegraf/africanfolk.jpg" alt=""></a>
-         
-       
-     </div>
-     <div class="col-lg-3 col-md-6 mb-4">
-        
-        <a href="#tune" onclick="folk()"> <img class="card-img-top" src="https://lh3.ggpht.com/nprQwX4hOA_AbYa9RrrUgBaUzYEkJxojFHFOBj8ERUk7o0jBprQnf7ysOr5sXxFI7A=w300" alt=""></a>
-         
-       
-     </div>
-
-
-    </div>
-</section>
     <section class="content-section bg-dark text-white" id="tune">
     <div id="lista">
 
