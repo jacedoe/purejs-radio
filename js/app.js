@@ -131,10 +131,22 @@ function myFunction(arr) {
 }
 // Cuando el usuario clicka en una radio, se abre el modal 
 	var lst = document.getElementById("lista");
-	lst.onclick = function() {
+	lst.onclick = function() {       
 		modal.style.display = "block";
 		document.getElementById("info").innerHTML = audioSource.src;
 	}
+// Mostrar la imagen de la emisora
+
+
+// Botones de control de audio del modal
+
+function playAudio() { 
+    audio.play(); 
+  } 
+  
+  function pauseAudio() { 
+    audio.pause(); 
+  }
 
 // Filtrado de resultados con JavaScript
 function mySearch() {
