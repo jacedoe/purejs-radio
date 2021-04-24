@@ -139,7 +139,7 @@ function myFunction(arr) {
 // Filtrado de resultados con JavaScript
 function mySearch() {
     // Declare variables
-    var input, filter, ul, li, a, i, txtValue;
+    var input, filter, ul, li, a, i;
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
     ul = document.getElementById("list");
@@ -147,24 +147,12 @@ function mySearch() {
   
     // Loop through all list items, and hide those who don't match the search query
     for (i = 0; i < li.length; i++) {
-      a = li[i].getElementsByTagName('a')[0];
-      txtValue = a.textContent || a.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        li[i].style.display = "";
-      } else {
-        li[i].style.display = "none";
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
       }
     }
-  }
 	
-// Buscar emisoras en la página con jQuery
-/*$(document).ready(function() {
-
-    $("#search").on("keyup", function() {
-        var value = $(this).val().toLowerCase();
-        $("#list *").filter(function() {
-            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-            
-        });
-    });
-}); */
