@@ -12,7 +12,7 @@ btn.onclick = function() {
     modal.style.display = "block";
 }
 
-// When the user clicks on <span> (x), close the modal
+// Cuando el usuario clicka en el <span> (x), cierra el modal
 span.onclick = function() {
     modal.style.display = "none";
 }
@@ -138,14 +138,14 @@ function myFunction(arr) {
 
 // Filtrado de resultados con JavaScript
 function mySearch() {
-    // Declare variables
+    // Declarar las variables
     var input, filter, ul, li, a, i;
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
     ul = document.getElementById("list");
     li = ul.getElementsByTagName('li');
   
-    // Loop through all list items, and hide those who don't match the search query
+    // Iteración en la parrilla que oculta los resultados no coincidentes
     for (i = 0; i < li.length; i++) {
         a = li[i].getElementsByTagName("a")[0];
         if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
