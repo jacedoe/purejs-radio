@@ -30,7 +30,13 @@
     <div class="container" style="width:900px;">
         <h2 align="center">JSON Live Data Search using Ajax JQuery</h2>
         <h3 align="center">Radio Browser Data</h3>
-        <br /><br />
+        <br />
+        <audio id="audio" controls="controls" crossorigin="anonymous">
+            <source id="audioSource" src="">
+    
+            Your browser does not support the audio format.
+          </audio>
+        <br />
         <div align="center">
             <input type="text" name="search" id="search" placeholder="Busca emisoras. Ex: jazz, rock..." class="form-control" />
         </div>
@@ -56,9 +62,9 @@
         </div>
 
     </div>
-</body>
 
-</html>
+
+
 <script src=""></script>
 <script>
     $(document).ready(function () {
@@ -79,12 +85,12 @@
                                 expression) != -1) {
 
                             $('#result').append(
-                                '"<li class="list-group-item link-class"><img src="' +
+                               /*  '"<li class="list-group-item link-class"><img src="' +
                                 value.favicon +
-                                '" height="40" width="40" class="img-thumbnail" /><a href="#" data-value=' +
+                                '" height="40" width="40" class="img-thumbnail" /><a href="" data-value=' +
                                 value.url + ' </a>| <span class="text-muted">' +
-                                value.name + '</span></li>'
-                                /*'<a href= data-value="' + value.url + '"><img id="emisora" src="' + value.favicon + '">' + value.name + '</a>'*/
+                                value.name + '</span></li>' */
+                                '<li><a href="" data-value="' + value.url + '"><img id="emisora" src="' + value.favicon + '">' + value.name + '</a></li>'
                                 );
                         }
                     }
@@ -99,13 +105,20 @@
         });
     });
 
-    // Buscar emisoras en la página con jQuery
-/*$(document).ready(function() {
-    $("#search").on("keyup", function() {
-        var value = $(this).val().toLowerCase();
-        $("#list *").filter(function() {
-            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)          
-        });
-    });
-}); */
 </script>
+<script>
+result.onclick = function(e) {
+    e.preventDefault();
+
+    var elm = e.target;
+    var audio = document.getElementById('audio');
+
+    var source = document.getElementById('audioSource');
+    source.src = elm.getAttribute('data-value');
+
+    audio.load(); // call this to just preload the audio without playing
+    audio.play(); // call this to play the song right away
+}
+    </script>
+</body>
+</html>
