@@ -107,16 +107,11 @@
                     function (
                         data) {
                         $.each(data, function (key, value) {
-                            if (value.codec === 'MP3') {
+                            if (value.codec === 'AAC+') {
                                 if (value.name.search(expression) != -1 || value.url.search(
                                     expression) != -1) {
 
                                     $('#result').append(
-                                        /*  '"<li class="list-group-item link-class"><img src="' +
-                                         value.favicon +
-                                         '" height="40" width="40" class="img-thumbnail" /><a href="" data-value=' +
-                                         value.url + ' </a>| <span class="text-muted">' +
-                                         value.name + '</span></li>' */
                                         '<li><a href="" data-value="' + value.url +
                                         '"><img id="emisora" src="' + value.favicon +
                                         '">' + value.name + '</a></li>'
