@@ -19,32 +19,26 @@
 
         #audio {
             width: -moz-available;
-            width: -webkit-fill-available;
-            width: stretch;
             margin-bottom: 10px;
         }
 
-        .search-input {
-            border-color: var(--variable-shim-input-border);
-            width: -moz-available;
+        .mdc-text-field {
             width: -webkit-fill-available;
-            height: 25px;
-            border-radius: 3px;
-            border-style: solid;
-            border-width: 1px;
-            padding-left: 10px;
-            font-size: 13px;
-            background-repeat: no-repeat;
-            background-position: right 5px center;
-            transition: all .1s;
-            background-color: var(--variable-shim-primary-background);
-            vertical-align: middle;
+            width: -moz-available;
+        }
 
+        .mdc-list {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            
+        }
+        a {
+            text-decoration: none;
         }
     </style>
 </head>
 
 <body>
+    <!-- Header -->
     <header class="mdc-top-app-bar">
         <div class="mdc-top-app-bar__row">
             <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
@@ -55,14 +49,15 @@
             <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
                 <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button"
                     aria-label="Favorite">favorite</button>
-                <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button"
-                    aria-label="Search">search</button>
+
                 <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button"
                     aria-label="Options">more_vert</button>
             </section>
         </div>
     </header>
     <main class="mdc-top-app-bar--fixed-adjust">
+
+        <!-- Audio Player-->
         <div>
 
             <audio id="audio" controls="controls" crossorigin="anonymous">
@@ -72,14 +67,26 @@
             </audio>
             <br />
             <div>
-                <input type="text" name="search" id="search" placeholder="Busca emisoras. Ex: jazz, rock..."
-                    class="input search-input opens-pop-over" />
+                <label class="mdc-text-field mdc-text-field--filled">
+
+                    <input type="text" aria-labelledby="my-label-id" name="search" id="search"
+                        class="mdc-text-field__input" />
+                    <span class="mdc-line-ripple"></span>
+                    <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button"
+                        aria-label="Search">search</button>
+                </label>
             </div>
-            <ul class="mdc-list" id="result">
-                <li class="mdc-list-item"></li>
-            </ul>
-            <br />
-        </div>
+
+            <!-- Lista Section -->
+            <div>
+
+                <ul class="mdc-list" id="result">
+                    <li class="mdc-list-item">
+                        <span class="mdc-list-item__ripple"></span>
+                    </li>
+                </ul>
+                <br />
+            </div>
     </main>
 
 
@@ -102,7 +109,7 @@
                         $.each(data, function (key, value) {
                             if (value.codec === 'MP3') {
                                 if (value.name.search(expression) != -1 || value.url.search(
-                                        expression) != -1) {
+                                    expression) != -1) {
 
                                     $('#result').append(
                                         /*  '"<li class="list-group-item link-class"><img src="' +
