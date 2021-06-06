@@ -2,12 +2,13 @@ body {
     padding-top: 0rem;
     
 }
-#cabecera, h1, p{
-    color: white;
-    text-align: center;
+#result {
+    margin-top: 100px;
 }
+
 #lista, li{
     list-style: none;
+    padding: 1.5rem;
 }
 
 #lista,
@@ -17,11 +18,8 @@ img {
     display: table-row;
 }
 
-a {
-    text-decoration: none;
-    padding: 8px 8px 8px 32px;
-    font-size: 25px;
-    
+li a {
+    text-decoration: none; 
 }
 
 a:hover {
@@ -30,10 +28,10 @@ a:hover {
 
 @keyframes anim {
     from {
-        color: red;
+        color: white;
     }
     to {
-        color: yellow;
+        color: grey;
     }
 }
 
@@ -96,48 +94,3 @@ audio {
     bottom: 10px;
     width: calc(100% - 20px);
 }
-
-#cabecera {
-   padding: 10px 16px;
-   background: #555;
-   color: #f1f1f1;
- }
-
-
- 
- .topnav {
-   overflow: hidden;
- 
- position: fixed; /* Set the navbar to fixed position */
- top: 0; /* Position the navbar at the top of the page */
- width: 100%; /* Full width */
-   
- }
- 
- .topnav #myLinks {
-   display: none;
- }
- 
- .topnav a {
-   float: left;
-   display: block;
-   color: #f2f2f2;
-   text-align: center;
-   padding: 14px 16px;
-   text-decoration: none;
-   font-size: 17px;
- }
- 
- .topnav a.icon {
-   float: right;
- }
- 
- .topnav a:hover {
-   background-color: #ddd;
-   color: black;
- }
- 
- .active {
-   background-color: #4CAF50;
-   color: white;
- }

@@ -20,35 +20,54 @@
 
 <body>
   <!-- Top Navigation Menu -->
-  <div class="topnav">
-    <a href="#exampleModal" id="myBtn" class="active">Player</a>
-    <div id="myLinks">
-      <a href="#rock" onclick="rock()">Rock</a>
-      <a href="#jazz" onclick="jazz()">Jazz</a>
-      <a href="#about">News</a>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded fixed-top">
+    <a class="navbar-brand" href="#">JS Radio</a>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse collapse" id="navbarsExample09" style="">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#exampleModal" id="myBtn">Player<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Playlist</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown09">
+            <a class="dropdown-item" href="#" onclick="playlist('rock')">Rock</a>
+            <a class="dropdown-item" href="#" onclick="playlist('jazz')">Jazz</a>
+            <a class="dropdown-item" href="#" onclick="playlist('news')">News</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown09">
+            <p class="dropdown-item">JS Radio es un proyecto de código abierto, escrito con JavaScript, para escuchar emisoras online. 
+              Más info en GitHub
+            </p>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">GitHub</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-md-0">
+        <input id="myInput" class="form-control" type="text" placeholder="Search" aria-label="Search" onkeyup="mySearch()">
+      </form>
     </div>
-    <a href="javascript:void(0);" class="icon" onclick="menu()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
-  <!-- Jumbotron Header -->
-  <header id="cabecera">
-    <h3>PureJS Radio!</h3>
-    <p> Esta es una radio libre
-    </p>
+  </nav>
+  <!-- Search Section -->
+
+    
     <div class="container">      
-      <div align="center">
-        <input type="text" name="search" id="myInput" placeholder="Busca emisoras. Ex: jazz, rock..."
-          class="form-control" onkeyup="mySearch()" />
-      </div>
       <ul class="list-group" id="result"></ul>
       <br />
     </div>
-  </header>
-  <!-- Parrilla -->
+  
+  <!-- Lista Section -->
   <section id="tune">
     <div id="lista">
-
       <ul id="list">
         <li class="active" style="list-style: none">
         </li>
@@ -83,17 +102,13 @@
   </div>
 
 
-  <script src="js/app.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/ajax.js"></script>
+  <script src="js/search.js"></script>
+  
+  <!-- Zona de Pruebas -->
   <script>
-    // funcion menu
-function menu() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
+    
   </script>
 </body>
 
