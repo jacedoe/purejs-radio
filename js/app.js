@@ -121,10 +121,11 @@ function myFunction(arr) {
     var out = "";
     var i;
     for (i = 0; i < arr.length; i++) {
-     //   if (arr[i].codec != "MP3") {
-     //       arr.splice(i, 1);
-     //   }
-        out += '<li><a href="#" data-value="' + arr[i].url + '"><img id="emisora" src="' + arr[i].favicon + '">' + arr[i].name + '</a></li>';
+        if (arr[i].codec === "AAC+") {
+            arr.push([i]);
+            out += '<li><a href="#" data-value="' + arr[i].url + '"><img id="emisora" src="' + arr[i].favicon + '">' + arr[i].name + '</a></li>';
+       }
+        
 
     }
     document.getElementById("list").innerHTML = out;

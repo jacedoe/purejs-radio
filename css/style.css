@@ -1,143 +1,143 @@
- body {
-     padding-top: 0rem;
-     background-color: currentColor!important;
- }
- #cabecera, h1, p{
-     color: white;
-     text-align: center;
- }
- #lista, li{
-     list-style: none;
- }
- 
- #lista,
- img {
-     width: 60px;
-     height: 60px;
-     display: table-row;
- }
- 
- a {
-     text-decoration: none;
-     padding: 8px 8px 8px 32px;
-     font-size: 25px;
-     color: white!important;
- }
- 
- a:hover {
-     color: #818181!important;
- }
- 
- @keyframes anim {
-     from {
-         color: red;
-     }
-     to {
-         color: yellow;
-     }
- }
- 
- #info {
-     text-align: center;
-     animation-name: anim;
-     animation-duration: 16s;
-     animation-iteration-count: infinite;
- }
- /* The Modal (background) */
- 
- .modal {
-     height: 25%;
-     display: none;
-     /* Hidden by default */
-     position: fixed;
-     /* Stay in place */
-     z-index: 1;
-     /* Sit on top */
-     padding-top: 100px;
-     
- }
- /* Modal Content */
- 
- .modal-content {
-     background-color: #343a40!important;
-     margin: auto;
-     padding: 0px;
-     border: 1px solid #888;
-     width: 80%;
-     height: 60%;
- }
- /* The Close Button */
- 
- .close {
-     color: #aaaaaa;
-     float: right;
-     font-size: 28px;
-     font-weight: bold;
- }
- 
- .close:hover,
- .close:focus {
-     color: #000;
-     text-decoration: none;
-     cursor: pointer;
- }
- 
- canvas {
-     left: 0;
-     top: 0;
-     width: 100%;
-     height: 100%;
- }
- 
- audio {
-     opacity: 0%;
-     position: fixed;
-     left: 10px;
-     bottom: 10px;
-     width: calc(100% - 20px);
- }
-
- #cabecera {
-    padding: 10px 16px;
-    background: #555;
-    color: #f1f1f1;
-  }
-
-
-  
-  .topnav {
-    overflow: hidden;
-  background-color: #333;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
+body {
+    padding-top: 0rem;
     
-  }
-  
-  .topnav #myLinks {
-    display: none;
-  }
-  
-  .topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  
-  .topnav a.icon {
-    float: right;
-  }
-  
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  .active {
-    background-color: #4CAF50;
+}
+#cabecera, h1, p{
     color: white;
-  }
+    text-align: center;
+}
+#lista, li{
+    list-style: none;
+}
+
+#lista,
+img {
+    width: 60px;
+    height: 60px;
+    display: table-row;
+}
+
+a {
+    text-decoration: none;
+    padding: 8px 8px 8px 32px;
+    font-size: 25px;
+    
+}
+
+a:hover {
+    color: #818181!important;
+}
+
+@keyframes anim {
+    from {
+        color: red;
+    }
+    to {
+        color: yellow;
+    }
+}
+
+#info {
+    text-align: center;
+    animation-name: anim;
+    animation-duration: 16s;
+    animation-iteration-count: infinite;
+}
+/* The Modal (background) */
+
+.modal {
+    height: 25%;
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    
+}
+/* Modal Content */
+
+.modal-content {
+    background-color: #343a40!important;
+    margin: auto;
+    padding: 0px;
+    border: 1px solid #888;
+    width: 80%;
+    height: 60%;
+}
+/* The Close Button */
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+canvas {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+audio {
+    opacity: 0%;
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    width: calc(100% - 20px);
+}
+
+#cabecera {
+   padding: 10px 16px;
+   background: #555;
+   color: #f1f1f1;
+ }
+
+
+ 
+ .topnav {
+   overflow: hidden;
+ 
+ position: fixed; /* Set the navbar to fixed position */
+ top: 0; /* Position the navbar at the top of the page */
+ width: 100%; /* Full width */
+   
+ }
+ 
+ .topnav #myLinks {
+   display: none;
+ }
+ 
+ .topnav a {
+   float: left;
+   display: block;
+   color: #f2f2f2;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+   font-size: 17px;
+ }
+ 
+ .topnav a.icon {
+   float: right;
+ }
+ 
+ .topnav a:hover {
+   background-color: #ddd;
+   color: black;
+ }
+ 
+ .active {
+   background-color: #4CAF50;
+   color: white;
+ }
