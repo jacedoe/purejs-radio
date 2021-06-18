@@ -107,3 +107,9 @@ audio.play();
 function pauseAudio() { 
 audio.pause(); 
 }
+
+// Control del volumen
+
+function volumen() {
+ audio.volume = document.getElementById("volume").value;
+}
