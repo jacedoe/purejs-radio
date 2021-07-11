@@ -1,23 +1,23 @@
 # [PureJS Radio](https://jacedoe.github.io/purejs-radio)
 
-[PureJS Radio](https://jacedoe.github.io/purejs-radio/) es una Single Web Application que sirve para escuchar radios que retransmiten a través de Internet.
+[PureJS Radio](https://jacedoe.github.io/purejs-radio/) is one personal project Web Application for listen free radios over Internet.
 
 ## Preview
 
-**[Ver el estado actual de PureJS Radio](https://jacedoe.github.io/purejs-radio/)**
+**[View the actual state of PureJS Radio](https://jacedoe.github.io/purejs-radio/)**
 
 ## Status
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jacedoe/purejs-radio)
 
-## Desarrollo
+## Development
 
-Para el desarrollo de esta aplicación utilizo lo siguiente:
+This project is developed with:
 
 - HTML5
 - JavaScript
 - CSS
-- Radio-Browser API
+- [Radio-Browser API](https://de1.api.radio-browser.info/#General)
 
 
 ## Usage
@@ -28,7 +28,11 @@ After downloading, simply edit the HTML, JavaScript and CSS files. These are the
 
 ## Bugs and Issues
 
+(In project)
+
 ## About
+
+Me? I like programming every day!
 
 ## Copyright and License
 

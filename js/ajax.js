@@ -7,23 +7,23 @@ function playlist(estil) {
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 var myArr = JSON.parse(this.responseText);
-                myFunction(myArr);
-            }
+                ajaxFunction(myArr);
+            } 
         };
         xmlhttp.open("GET", url, true);
         xmlhttp.send();
     
         
-    function myFunction(arr) {
+    function ajaxFunction(arr) {
         
         var out = "";
         var i;
         for (i = 0; i < arr.length; i++) {
-            if (arr[i].codec != "MP3") {
+            if (arr[i].favicon == "") {
                 arr.pop()
                 
            } else {
-            out += '<li><a href="#" data-value="' + arr[i].url + '"><img id="emisora" src="' + arr[i].favicon + '">' + arr[i].name + '</a></li>';
+            out += '<li class="radio"><a href="#" data-value="' + arr[i].url + '"><img id="emisora" src="' + arr[i].favicon + '" + onerror="this.onerror=null; this.remove();" alt="2" width="100" height="120">' + arr[i].name + '</a></li>';
            }
            
             
